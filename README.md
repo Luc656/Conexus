@@ -32,7 +32,35 @@ make conda env?
 
 - Conexus then unpacks these gene clusters, finding their individual genes and the input file they origintated from. After this the program finds the corresponding RGI output for each of the files, collecting a list of all the predicted AMR genes present. Where the list of genes present in the significant co-occuring clusters overlaps with the list of AMR genes present the program considers these genes as key hits retruniung them in hits.csv
 # Parameters
-
+|Option     | Description |
+|-----------|-------------|
+|Threads    |bla bla.     |
+|Prefix     |bla bla.     |
+|Connection | bla bla.    |
 # Output
+##### Hits.txt
+- File conatining all the key gene associations with an identified link to AMR, including the clusters they form part of (as per Panaroo) and the file they originated from
+##### Stats.txt
+File containing information on:
+  - Number of input files
+  - Number of files that successfully passed each stage
+  - List of files which failed at each particular stage
+  - The number of AMR genes dicovered and the number of key pairings
+  - The number of key pairings where one was identified in the AMR step
+ ##### AMRgenes.csv
+ CSV with all predicted AMR genes discovered in the input files, with information on:
+  - The originating input file
+  - Predicted gene (best hit in the database)
+  - Sequence & sequence identity
+  - Resistance mechanism
+  - Drug target
+ ##### Bins.csv
+ CSV with overrall information on all of the input bins (files), e.g.:
+  - The length of each in bases
+  - The number of identified AMR genes in each
+  - The number of AMr genes per base 
 
 # Examples
+```
+Conexus -i *.fasta -prefix Patient1 -threads 10 -connection associate
+```
