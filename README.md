@@ -26,9 +26,9 @@ make conda env?
 
 - All discovered AMR genes will be added into a pandas dataframe with literature-sourced information of each to allow for future visualisation and analysis
 ##### Pangenome creation
-- Panaroo is used to link all genes stored separatley in different files into an overall pangenome, while additionally clustering highly similar genes into orthologous and paralogous clusters to give an accurate picture of both core and accessory genomes
+- Panaroo is used to link all genes stored separatley in different files into an overall pangenome, while additionally clustering highly similar genes into orthologous and paralogous clusters to give an accurate picture of both core and accessory genomes of the bacterial community.
 ##### Finding key pairings
-- Coinfinder takes Panaroo resuluts as input measuring the relative abundance of different gene clusters in the pangenome and calculating expected co-occurances between different pairs, returning those appearing significantly more or less than would be expected by chance.
+- Coinfinder takes Panaroo results as input measuring the relative abundance of different gene clusters in the pangenome and calculating expected co-occurances between different pairs, returning those appearing significantly more or less than would be expected by chance.
 
 - Conexus then unpacks these gene clusters, finding their individual genes and the input file they origintated from. After this the program finds the corresponding RGI output for each of the files, collecting a list of all the predicted AMR genes present. Where the list of genes present in the significant co-occuring clusters overlaps with the list of AMR genes present the program considers these genes as key hits retruniung them in hits.csv
 # Parameters
