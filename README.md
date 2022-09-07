@@ -11,6 +11,14 @@ Conexus (latin for connection) is a bioinformatics pipeline designed to find key
  - [os](https://docs.python.org/3/library/os.html#module-os)
  - [Subprocess](https://docs.python.org/3/library/subprocess.html#module-subprocess)
  - [CSV](https://docs.python.org/3/library/csv.html#module-csv)
+# Requirements 
+Conexus requires that input files are in FASTA format and end in '.fasta' while each file must also contain a unique ID wether a number or a code seprated by a full stop. The program requires that the position of the ID when the file name is split by full stops is suppied in the -id parameter. 
+
+e.g.
+```
+This.is.file.number.001.fasta
+```
+Here the unique ID is at position 4 (counting from 0) when split by the full stops
 # Installation
 ```
 git clone https://github.com/Luc656/Conexus.git
@@ -34,9 +42,11 @@ make conda env?
 # Parameters
 |Option     | Description |
 |-----------|-------------|
-|Threads    |bla bla.     |
-|Prefix     |bla bla.     |
-|Connection | bla bla.    |
+|--threads   |Number of threads to run the program (recommended >= 8)     |
+|-prefix     |prefix name for output files     |
+|-connection |either associate or disassociate for the type of link between gene pairs    |
+|-mode.      |Stringency level for which to run panaroo, either strict, moderate or sensitive for details see https://gtonkinhill.github.io/panaroo/#/gettingstarted/params
+|-id.        |The postion of the FASTA file's unique identifier starting from 0
 # Output
 ##### Hits.txt
 - File conatining all the key gene associations with an identified link to AMR, including the clusters they form part of (as per Panaroo) and the file they originated from
@@ -62,5 +72,5 @@ File containing information on:
 
 # Examples
 ```
-Conexus -i *.fasta -prefix Patient1 -threads 10 -connection associate
+Conexus -prefix Patient1 -threads 10 -connection associate -mode sensitive -id 4
 ```
