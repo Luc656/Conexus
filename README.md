@@ -22,9 +22,7 @@ Here the unique ID is at position 4 (counting from 0) when split by the full sto
 # Installation
 ```
 git clone https://github.com/Luc656/Conexus.git
-cd 
-chmod
-make conda env?
+
 ```
 # Process
 ##### Annotation
