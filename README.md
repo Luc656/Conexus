@@ -22,7 +22,6 @@ Here the unique ID is at position 4 (counting from 0) when split by the full sto
 # Installation
 ```
 git clone https://github.com/Luc656/Conexus.git
-
 ```
 # Process
 ##### Annotation
@@ -70,5 +69,5 @@ File containing information on:
 
 # Examples
 ```
-Conexus -prefix Patient1 -threads 10 -connection associate -mode sensitive -id 4
+python Conexus -prefix Patient1 -threads 10 -connection associate -mode sensitive -id 4
 ```
