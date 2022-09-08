@@ -19,10 +19,11 @@ e.g.
 This.is.file.number.001.fasta
 ```
 Here the unique ID is at position 4 (counting from 0) when split by the full stops
-# Installation
+# Installation & Usage
 ```
 git clone https://github.com/Luc656/Conexus.git
 ```
+Run the Conexus python script in the same directory that contains your sequences, the program will automatically begin processing any file ending in '.fasta'
 # Process
 ##### Annotation
 - Conexus uses PROKKA to carry out the annotation step in the hopes of identifying predicted genes and their putative function from the raw genomic input, looping through each of the given files and creating a file specific PROKKA output folder stroring the results
