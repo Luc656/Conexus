@@ -37,13 +37,13 @@ git clone https://github.com/Luc656/Conexus.git
 
 - Conexus then unpacks these gene clusters, finding their individual genes and the input file they origintated from. After this the program finds the corresponding RGI output for each of the files, collecting a list of all the predicted AMR genes present. Where the list of genes present in the significant co-occuring clusters overlaps with the list of AMR genes present the program considers these genes as key hits retruniung them in hits.csv
 # Parameters
-|Option     | Description |
-|-----------|-------------|
-|--threads   |Number of threads to run the program (recommended >= 8)     |
-|-prefix     |prefix name for output files     |
-|-connection |either associate or disassociate for the type of link between gene pairs    |
-|-mode.      |Stringency level for which to run panaroo, either strict, moderate or sensitive for details see https://gtonkinhill.github.io/panaroo/#/gettingstarted/params
-|-id.        |The postion of the FASTA file's unique identifier starting from 0
+|Option      | Description |
+|------------|-------------|
+|--threads      |Number of threads to run the program (recommended >= 8)     |
+|-prefix        |prefix name for output files     |
+|-connection    |either associate or disassociate for the type of link between gene pairs    |
+|-mode          |Stringency level for which to run panaroo, either strict, moderate or sensitive for details see https://gtonkinhill.github.io/panaroo/#/gettingstarted/params
+|-id.           |The postion of the FASTA file's unique identifier starting from 0
 # Output
 ##### Hits.txt
 - File conatining all the key gene associations with an identified link to AMR, including the clusters they form part of (as per Panaroo) and the file they originated from
